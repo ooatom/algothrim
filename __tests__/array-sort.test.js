@@ -2,12 +2,14 @@ import { bubbleSort, bubbleSort_v1, bubbleSort_v2 } from '../array-sort/bubble-s
 import selectionSort from '../array-sort/selection-sort';
 import insertionSort from '../array-sort/insertion-sort';
 import cocktailSort from '../array-sort/cocktail-sort';
+import {quickSort, quickSort_iteration} from '../array-sort/quick-sort';
+import {mergeSort, mergeSort_iteration} from '../array-sort/merge-sort';
 
 const shuffledArrays = [
-    [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
+    [1, 2, 3, 4, 5, 6, 7, 8],
     [10, 9, 8, 7, 6, 5, 4, 3, 2, 1],
-    [1, 2, 3, 4, 5, 6, 10, 9, 8, 7, 6],
-    [10, 9, 8, 7, 6, 1, 2, 3, 4, 5, 6],
+    [1, 2, 3, 4, 5, 6, 7, 8, 15, 14, 13, 12, 11, 10, 9, 8],
+    [10, 9, 8, 7, 6, 1, 2, 3, 4, 5, 6,],
     new Array(39).fill(undefined).map(() => Math.round(Math.random() * 100))
 ];
 
@@ -42,5 +44,19 @@ describe.each(
     
     test('cocktailSort', () => {
         expect(cocktailSort(origin).join()).toEqual(expected.join());
+    });
+    
+    test('quickSort', () => {
+        expect(quickSort(origin).join()).toEqual(expected.join());
+    });
+    test('quickSort_iteration', () => {
+        expect(quickSort_iteration(origin).join()).toEqual(expected.join());
+    });
+    
+    test('mergeSort', () => {
+        expect(mergeSort(origin).join()).toEqual(expected.join());
+    });
+    test('mergeSort_iteration', () => {
+        expect(mergeSort_iteration(origin).join()).toEqual(expected.join());
     });
 });
