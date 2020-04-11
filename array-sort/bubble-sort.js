@@ -12,7 +12,7 @@ function bubbleSort(arr) {
     return arr;
 }
 
-function bubbleSort_1(arr) {
+function bubbleSort_v1(arr) {
     let temp, isSwapped;
 
     for (let i = 0, len = arr.length; i < len - 1; i++) {
@@ -34,7 +34,7 @@ function bubbleSort_1(arr) {
     return arr;
 }
 
-function bubbleSort_2(arr) {
+function bubbleSort_v2(arr) {
     let temp, isSwapped, len, sortBorder, lastSwapIndex;
     len = arr.length;
     sortBorder = len - 1;
@@ -64,6 +64,6 @@ function bubbleSort_2(arr) {
 
 export {
     bubbleSort,
-    bubbleSort_1,
-    bubbleSort_2
+    bubbleSort_v1,
+    bubbleSort_v2
 };
