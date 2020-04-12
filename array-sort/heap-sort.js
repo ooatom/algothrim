@@ -23,14 +23,14 @@ function siftDown(arr, start, end) {
     }
 }
 
-function minHeapify(arr) {
+function maxHeapify(arr) {
     for (let i = Math.floor((arr.length - 2) / 2); i >= 0; i--) {
         siftDown(arr, i, arr.length - 1);
     }
 }
 
 function heapSort(arr) {
-    minHeapify(arr);
+    maxHeapify(arr);
 
     let end = arr.length - 1;
     while (end > 0) {
