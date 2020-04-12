@@ -5,6 +5,7 @@ import cocktailSort from '../array-sort/cocktail-sort';
 import { quickSort, quickSort_iteration } from '../array-sort/quick-sort';
 import { mergeSort, mergeSort_iteration } from '../array-sort/merge-sort';
 import shellSort from '../array-sort/shell-sort';
+import heapSort from '../array-sort/heap-sort';
 
 const shuffledArrays = [
     [1, 2, 3, 4, 5, 6, 7, 8],
@@ -63,5 +64,9 @@ describe.each(
     
     test('shellSort', () => {
         expect(shellSort(origin).join()).toEqual(expected.join());
+    });
+    
+    test('heapSort', () => {
+        expect(heapSort(origin).join()).toEqual(expected.join());
     });
 });
