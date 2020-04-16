@@ -17,7 +17,7 @@ const shuffledArrays = [
     [1, 2, 3, 4, 5, 6, 7, 8, 15, 14, 13, 12, 11, 10, 9, 8],
     [10, 9, 8, 7, 6, 1, 2, 3, 4, 5, 6],
     new Array(37).fill(undefined).map(() => Math.round(Math.random() * 100)),
-    new Array(16).fill(undefined).map(() => Math.round(Math.random() * Math.pow(10, 4) + Math.pow(10, 4)))
+    new Array(16).fill(undefined).map(() => Math.round(Math.pow(10, 4) * Math.random() * 1.5))
 ];
 
 const shuffledArrays_float = [
